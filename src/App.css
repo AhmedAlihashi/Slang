@@ -1,0 +1,19 @@
+#NoDrag {
+  -webkit-app-region: no-drag;
+}
+
+.AppContainer {
+  max-width: auto;
+  text-align: left;
+  -webkit-app-region: drag;
+}
+
+.AppHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.App {
+  text-align: left;
+}
