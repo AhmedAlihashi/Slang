@@ -13,7 +13,6 @@ async function createWindow() {
     width: 1080,
     minHeight: "30vw",
     frame: false,
-    transparent: true,
     webPreferences: {
       nodeIntegration: true,
     },

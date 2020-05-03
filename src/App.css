@@ -3,6 +3,8 @@
 }
 
 .AppContainer {
+  border: solid coral;
+  margin: 0;
   max-width: auto;
   text-align: left;
   -webkit-app-region: drag;
@@ -12,8 +14,4 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.App {
-  text-align: left;
 }

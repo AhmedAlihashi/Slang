@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 
-import App from "./App";
+import { Core } from "./Reactor";
 import "./index.css";
 
-render(<App />, document.getElementById("root"));
+render(<Core />, document.getElementById("root"));
