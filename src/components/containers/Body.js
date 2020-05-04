@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Segment, Comment, Header } from "semantic-ui-react";
-import Comments from "../Comments";
+import { Comments, RecommendedContent } from "../";
 
 //import Plyr from "plyr";
 
@@ -35,15 +35,7 @@ const Body = () => (
       </Grid.Column>
       <Grid.Column width={16}>
         <Grid.Row stretched>
-          <Segment piled textAlign="center">
-            <Grid>
-              <Grid.Row>
-                <Grid.Column width={8}>
-                  <div id="NoDrag" style={{ padding: 50 }}></div>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-          </Segment>
+          <RecommendedContent />
         </Grid.Row>
       </Grid.Column>
     </Grid>
