@@ -2,16 +2,15 @@
   -webkit-app-region: no-drag;
 }
 
-.AppContainer {
-  border: solid coral;
-  margin: 0;
-  max-width: auto;
-  text-align: left;
-  -webkit-app-region: drag;
-}
-
 .AppHeader {
+  -webkit-app-region: drag;
   display: flex;
   align-items: center;
+  background-color: #2d5857;
+}
+.AppTitle {
+  display: flex;
+  width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
