@@ -129,17 +129,65 @@ const App = () => {
                       />
                     </Button.Group>
                   </Segment>
-                  <Button
-                    fluid
-                    compact
-                    id="NoDrag"
-                    icon="bars"
-                    color="green"
-                    style={{ fontSize: "1vw" }}
-                    onClick={() => {
-                      setSidebarVisible(!sidebarVisible);
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      justifyContent: "center",
+                      width: "100%",
                     }}
-                  />
+                  >
+                    <Button.Group vertical>
+                      <Button
+                        size="massive"
+                        icon="user circle"
+                        color="black"
+                        onClick={() => {
+                          console.log("Picture-in-picture");
+                        }}
+                      />
+                      <Button
+                        size="massive"
+                        icon="search"
+                        color="black"
+                        onClick={() => {
+                          console.log("Fullscreen video");
+                        }}
+                      />
+                      <Button
+                        size="massive"
+                        icon="hotjar"
+                        color="black"
+                        onClick={() => {
+                          console.log("Random video");
+                        }}
+                      />
+                      <Button
+                        size="massive"
+                        icon="expand"
+                        color="black"
+                        onClick={() => {
+                          console.log("Picture-in-picture");
+                        }}
+                      />
+                      <Button
+                        size="massive"
+                        icon="expand arrows alternate"
+                        color="black"
+                        onClick={() => {
+                          console.log("Fullscreen video");
+                        }}
+                      />
+                      <Button
+                        size="massive"
+                        icon="history"
+                        color="black"
+                        onClick={() => {
+                          console.log("Random video");
+                        }}
+                      />
+                    </Button.Group>
+                  </div>
                 </Segment>
               </Grid.Column>
               <Grid.Column width={14}>
