@@ -7,6 +7,7 @@ import {
   Segment,
   Button,
   Sidebar,
+  Card,
 } from "semantic-ui-react";
 import "./../App.css";
 import { Body } from "../components/containers";
@@ -15,9 +16,9 @@ const App = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
 
   useEffect(() => {}, []);
-
+  console.log("width - height ", window.innerWidth, window.innerHeight);
   return (
-    <Sidebar.Pushable as={Segment}>
+    <Sidebar.Pushable as="div">
       <Sidebar
         as={Menu}
         animation="slide along"
@@ -32,7 +33,6 @@ const App = () => {
         <Menu.Item as="a">Games</Menu.Item>
         <Menu.Item as="a">Channels</Menu.Item>
       </Sidebar>
-
       <Sidebar.Pusher dimmed={sidebarVisible}>
         <Segment basic style={{ padding: 0 }}>
           <div className="AppHeader">
@@ -83,6 +83,7 @@ const App = () => {
                   id="NoDrag"
                   inverted
                   style={{
+                    height: "100vh",
                     alignItems: "flex-start",
                     justifyItems: "center",
                     backgroundColor: "#2d5857",

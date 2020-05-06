@@ -11,7 +11,8 @@ async function createWindow() {
   await app.whenReady();
   mainWindow = new BrowserWindow({
     width: 1080,
-    minHeight: "30vw",
+    minWidth: 780,
+    minHeight: 698,
     transparent: true,
     frame: false,
     webPreferences: {
