@@ -139,7 +139,7 @@ const App = () => {
                   >
                     <Button.Group vertical>
                       <Button
-                        size="massive"
+                        style={{ fontSize: "2.5vw" }}
                         icon="user circle"
                         color="black"
                         onClick={() => {
@@ -147,7 +147,7 @@ const App = () => {
                         }}
                       />
                       <Button
-                        size="massive"
+                        style={{ fontSize: "2.5vw" }}
                         icon="search"
                         color="black"
                         onClick={() => {
@@ -155,7 +155,7 @@ const App = () => {
                         }}
                       />
                       <Button
-                        size="massive"
+                        style={{ fontSize: "2.5vw" }}
                         icon="hotjar"
                         color="black"
                         onClick={() => {
@@ -163,7 +163,7 @@ const App = () => {
                         }}
                       />
                       <Button
-                        size="massive"
+                        style={{ fontSize: "2.5vw" }}
                         icon="expand"
                         color="black"
                         onClick={() => {
@@ -171,7 +171,7 @@ const App = () => {
                         }}
                       />
                       <Button
-                        size="massive"
+                        style={{ fontSize: "2.5vw" }}
                         icon="expand arrows alternate"
                         color="black"
                         onClick={() => {
@@ -179,7 +179,7 @@ const App = () => {
                         }}
                       />
                       <Button
-                        size="massive"
+                        style={{ fontSize: "2.5vw" }}
                         icon="history"
                         color="black"
                         onClick={() => {
