@@ -9,7 +9,6 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "bootstrap": "^4.4.1",
     "cross-env": "^7.0.2",
     "electron-dl": "^3.0.0",
     "eslint": "^6.8.0",
@@ -17,17 +16,18 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
+    "framer-motion": "^1.10.3",
     "gulp": "^3.9.1",
-    "node-sass": "^4.13.1",
+    "plyr": "^3.6.2",
     "prop-types": "^15.6.1",
     "react": "^16.13.1",
     "react-countup": "^4.3.3",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.13.1",
-    "react-redux": "^7.0.3",
+    "react-player": "^2.0.1",
     "react-scripts": "3.4.1",
-    "rebass": "^4.0.7",
+    "react-sticky": "^6.0.3",
     "recharts": "^1.8.5",
-    "redux": "^4.0.1",
     "semantic-ui-react": "^0.88.2",
     "theme-ui": "^0.3.1"
   },
@@ -62,8 +62,7 @@
   "devDependencies": {
     "electron": "^8.2.3",
     "electron-builder": "^22.5.1",
-    "enzyme": "^3.3.0",
-    "semantic-ui": "^2.3.0"
+    "enzyme": "^3.3.0"
   },
   "build": {
     "appId": "com.electron.electron-with-create-react-app",

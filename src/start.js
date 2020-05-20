@@ -10,10 +10,11 @@ let mainWindow;
 async function createWindow() {
   await app.whenReady();
   mainWindow = new BrowserWindow({
-    width: 1080,
-    minHeight: "30vw",
-    frame: false,
+    width: 900,
+    minWidth: 780,
+    minHeight: 698,
     transparent: true,
+    frame: false,
     webPreferences: {
       nodeIntegration: true,
     },
