@@ -8,213 +8,59 @@ import {
   Button,
   Sidebar,
   Card,
+  Rating,
 } from "semantic-ui-react";
 import "./../App.css";
-import { Body } from "../components/containers";
+import { Title, LeftBar, Body } from "../components/containers";
+import { Scrollbars } from "react-custom-scrollbars";
 
 const App = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
+  const demoVid =
+    "https://firebasestorage.googleapis.com/v0/b/slang-e0aea.appspot.com/o/Will%20%26%20Carlton.mp4?alt=media&token=14a07826-7f5b-4f21-b21f-6b35377cd3cc";
 
   useEffect(() => {}, []);
-  console.log("width - height ", window.innerWidth, window.innerHeight);
+
   return (
-    <Segment inverted tertiary style={{ padding: 0 }}>
-      <Sidebar.Pushable as="div">
-        <Sidebar
-          as={Menu}
-          animation="slide along"
-          icon="labeled"
-          inverted
-          onHide={() => setSidebarVisible(!sidebarVisible)}
-          vertical
-          visible={sidebarVisible}
-          width="thin"
-        >
-          <Menu.Item as="a">Home</Menu.Item>
-          <Menu.Item as="a">Games</Menu.Item>
-          <Menu.Item as="a">Channels</Menu.Item>
-        </Sidebar>
-        <Sidebar.Pusher dimmed={sidebarVisible}>
-          <Segment basic style={{ padding: 0 }}>
-            <div className="AppHeader">
-              <Grid celled="internally">
-                <Grid.Row>
-                  <Grid.Column width={4}>
-                    <Header as="h1" style={{ color: "white" }}>
-                      <Button
-                        compact
-                        id="NoDrag"
-                        icon="bars"
-                        color="black"
-                        style={{ fontSize: "1w" }}
-                        onClick={() => {
-                          setSidebarVisible(!sidebarVisible);
-                        }}
-                      />
-                      Slang.
-                    </Header>
-                  </Grid.Column>
-                  <Grid.Column width={4}>
-                    <Header as="h3" style={{ color: "white" }}>
-                      <Header.Content>
-                        Account Settings
-                        <Header.Subheader>
-                          Manage your preferences
-                        </Header.Subheader>
-                      </Header.Content>
-                    </Header>
-                  </Grid.Column>
+    <Scrollbars id="NoDrag" style={{ width: "100vw", height: "100vh" }}>
+      <Segment inverted tertiary style={{ padding: 0 }}>
+        <Sidebar.Pushable as="div">
+          <Sidebar
+            as={Menu}
+            animation="slide along"
+            icon="labeled"
+            inverted
+            onHide={() => setSidebarVisible(!sidebarVisible)}
+            vertical
+            visible={sidebarVisible}
+            width="thin"
+          >
+            <Menu.Item as="a">Home</Menu.Item>
+            <Menu.Item as="a">Games</Menu.Item>
+            <Menu.Item as="a">Channels</Menu.Item>
+          </Sidebar>
+          <Sidebar.Pusher dimmed={sidebarVisible}>
+            <Segment basic style={{ padding: 0 }}>
+              <Grid columns={1}>
+                <Grid.Row
+                  className="AppHeader"
+                  style={{ marginTop: 10, marginRight: 12, marginLeft: 12 }}
+                >
+                  <Title
+                    sidebarVisible={sidebarVisible}
+                    setSidebarVisible={setSidebarVisible}
+                  />
 
-                  <Grid.Column width={5} />
+                  <LeftBar setSidebarVisible={setSidebarVisible} />
 
-                  <Grid.Column width={3}>
-                    <Button.Group id="NoDrag" floated="right">
-                      <Button icon>
-                        <Icon className="bell outline icon" />
-                      </Button>
-                      <Button content="Logout" />
-                      <Button
-                        icon
-                        color="red"
-                        onClick={() => {
-                          window.close();
-                        }}
-                      >
-                        <Icon className="power off icon" />
-                      </Button>
-                    </Button.Group>
-                  </Grid.Column>
+                  <Body demoVid={demoVid} />
                 </Grid.Row>
               </Grid>
-            </div>
-
-            <Grid columns={2}>
-              <Grid.Row stretched>
-                <Grid.Column width={2}>
-                  <Segment
-                    vertical
-                    id="NoDrag"
-                    inverted
-                    style={{
-                      height: "100vh",
-                      alignItems: "flex-start",
-                      justifyItems: "center",
-                      backgroundColor: "#2d5857",
-                    }}
-                  >
-                    <Segment
-                      vertical
-                      id="NoDrag"
-                      inverted
-                      style={{
-                        display: "flex",
-                        alignItems: "flex-start",
-                        justifyContent: "center",
-                        marginTop: -15,
-                        marginBottom: 15,
-                        border: "solid 5px black",
-                        backgroundColor: "#7C8C8C",
-                      }}
-                    >
-                      <Button.Group vertical>
-                        <Button
-                          icon="expand"
-                          color="black"
-                          style={{ fontSize: "2.5vw" }}
-                          onClick={() => {
-                            console.log("Picture-in-picture");
-                          }}
-                        />
-                        <Button
-                          icon="expand arrows alternate"
-                          color="black"
-                          style={{ fontSize: "2.5vw" }}
-                          onClick={() => {
-                            console.log("Fullscreen video");
-                          }}
-                        />
-                        <Button
-                          icon="shuffle"
-                          color="black"
-                          style={{ fontSize: "2.5vw" }}
-                          onClick={() => {
-                            console.log("Random video");
-                          }}
-                        />
-                      </Button.Group>
-                    </Segment>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "flex-start",
-                        justifyContent: "center",
-                        width: "100%",
-                      }}
-                    >
-                      <Button.Group vertical>
-                        <Button
-                          style={{ fontSize: "2.5vw" }}
-                          icon="user circle"
-                          color="black"
-                          onClick={() => {
-                            console.log("Picture-in-picture");
-                          }}
-                        />
-                        <Button
-                          style={{ fontSize: "2.5vw" }}
-                          icon="search"
-                          color="black"
-                          onClick={() => {
-                            console.log("Fullscreen video");
-                          }}
-                        />
-                        <Button
-                          style={{ fontSize: "2.5vw" }}
-                          icon="hotjar"
-                          color="black"
-                          onClick={() => {
-                            console.log("Random video");
-                          }}
-                        />
-                        <Button
-                          style={{ fontSize: "2.5vw" }}
-                          icon="expand"
-                          color="black"
-                          onClick={() => {
-                            console.log("Picture-in-picture");
-                          }}
-                        />
-                        <Button
-                          style={{ fontSize: "2.5vw" }}
-                          icon="expand arrows alternate"
-                          color="black"
-                          onClick={() => {
-                            console.log("Fullscreen video");
-                          }}
-                        />
-                        <Button
-                          style={{ fontSize: "2.5vw" }}
-                          icon="history"
-                          color="black"
-                          onClick={() => {
-                            console.log("Random video");
-                          }}
-                        />
-                      </Button.Group>
-                    </div>
-                  </Segment>
-                </Grid.Column>
-                <Grid.Column width={14}>
-                  <Segment basic id="NoDrag">
-                    <Body />
-                  </Segment>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-          </Segment>
-        </Sidebar.Pusher>
-      </Sidebar.Pushable>
-    </Segment>
+            </Segment>
+          </Sidebar.Pusher>
+        </Sidebar.Pushable>
+      </Segment>
+    </Scrollbars>
   );
 };
 
