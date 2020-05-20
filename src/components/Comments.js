@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Comment, Header } from "semantic-ui-react";
+import { Comment } from "semantic-ui-react";
 
 export default class Comments extends Component {
   render() {
@@ -14,10 +14,11 @@ export default class Comments extends Component {
           </Comment.Metadata>
           <Comment.Text>{content}</Comment.Text>
           <Comment.Actions>
-            <a>Reply</a>
-            <a>
-              20 <i className="thumbs up outline"></i>
-            </a>
+            <span>
+              <p>
+                Reply {"    "}20 <i className="thumbs up outline"></i>
+              </p>
+            </span>
           </Comment.Actions>
         </Comment.Content>
       </Comment>
