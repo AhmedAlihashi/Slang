@@ -21,7 +21,7 @@ class Title extends Component {
           </Header>
         </Grid.Column>
 
-        <Grid.Column width={4}>
+        <Grid.Column width={6}>
           <Header
             floated="left"
             as="h3"
@@ -30,15 +30,23 @@ class Title extends Component {
           >
             <Header.Content>
               The Will & Carlton Dance
-              <Header.Subheader as="h4" style={{ color: "white" }}>
+              <Header.Subheader style={{ color: "black" }}>
                 Will & Carlton
+                <div id="NoDrag">
+                  <Rating
+                    onRate={this.handleRate}
+                    maxRating={5}
+                    // defaultRating={rating}
+                    icon="star"
+                    size="large"
+                  />
+                </div>
               </Header.Subheader>
-              <Header.Subheader as="h5">Nov 13, 1995</Header.Subheader>
             </Header.Content>
           </Header>
         </Grid.Column>
 
-        <Grid.Column width={4}>
+        <Grid.Column width={5}>
           <Input
             id="NoDrag"
             fluid
@@ -46,48 +54,6 @@ class Title extends Component {
             iconPosition="left"
             placeholder="Search..."
           />
-        </Grid.Column>
-
-        <Grid.Column width={3}>
-          <Header floated="right" style={{ color: "white" }}>
-            <div id="NoDrag">
-              <Rating
-                onRate={this.handleRate}
-                maxRating={5}
-                // defaultRating={rating}
-                icon="star"
-                size="large"
-              />
-            </div>
-            <div id="NoDrag">
-              <Button.Group size="small">
-                <Button
-                  icon="share alternate"
-                  basic
-                  color="black"
-                  onClick={() => {
-                    console.log("share");
-                  }}
-                />
-                <Button
-                  icon="save outline"
-                  basic
-                  color="black"
-                  onClick={() => {
-                    console.log("save");
-                  }}
-                />
-                <Button
-                  icon="flag outline"
-                  basic
-                  color="black"
-                  onClick={() => {
-                    console.log("flag");
-                  }}
-                />
-              </Button.Group>
-            </div>
-          </Header>
         </Grid.Column>
 
         <Grid.Column width={3}>
