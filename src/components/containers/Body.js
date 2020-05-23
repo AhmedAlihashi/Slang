@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Grid, Rating, Segment, Header, Icon } from "semantic-ui-react";
 import { RecommendedContent } from "../";
 import { VideoPlayer, ContentOptions, CommentSection } from "../modules";
+import { BodyContext } from "../../Reactor/Context/BodyContext";
 
 class Body extends Component {
   state = {};
@@ -16,6 +17,11 @@ class Body extends Component {
       <Grid.Column width={14}>
         <Segment basic id="NoDrag">
           <Segment>
+            <BodyContext.Consumer>
+              {(context) => {
+                console.log(context.infoSwitch);
+              }}
+            </BodyContext.Consumer>
             <Grid columns="equal">
               <Grid.Column width={11}>
                 <Header as="h3" floated="right">
