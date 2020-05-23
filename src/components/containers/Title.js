@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Header, Grid, Rating, Button, Icon, Input } from "semantic-ui-react";
+import {
+  Header,
+  Grid,
+  Button,
+  Icon,
+  Input,
+  Statistic,
+} from "semantic-ui-react";
 
 class Title extends Component {
   state = {};
@@ -22,28 +29,31 @@ class Title extends Component {
         </Grid.Column>
 
         <Grid.Column width={6}>
-          <Header
-            floated="left"
-            as="h3"
-            textAlign={"left"}
-            style={{ color: "white" }}
-          >
-            <Header.Content>
-              The Will & Carlton Dance
-              <Header.Subheader style={{ color: "black" }}>
-                Will & Carlton
-                <div id="NoDrag">
-                  <Rating
-                    onRate={this.handleRate}
-                    maxRating={5}
-                    // defaultRating={rating}
-                    icon="star"
-                    size="large"
-                  />
-                </div>
-              </Header.Subheader>
-            </Header.Content>
-          </Header>
+          <Grid columns="equal">
+            <Grid.Column width={12}>
+              <Header
+                floated="left"
+                as="h3"
+                textAlign={"left"}
+                style={{ color: "white" }}
+              >
+                <Header.Content>
+                  The Will & Carlton Dance
+                  <Header.Subheader style={{ color: "black" }}>
+                    Will & Carlton
+                  </Header.Subheader>
+                </Header.Content>
+              </Header>
+            </Grid.Column>
+            <Grid.Column>
+              <Statistic size="mini">
+                <Statistic.Value>
+                  <Icon name="star" color="yellow" size="small" />5
+                </Statistic.Value>
+                <Statistic.Label>Rating</Statistic.Label>
+              </Statistic>
+            </Grid.Column>
+          </Grid>
         </Grid.Column>
 
         <Grid.Column width={5}>

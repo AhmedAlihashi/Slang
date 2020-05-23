@@ -41,7 +41,7 @@ const App = () => {
           </Sidebar>
           <Sidebar.Pusher dimmed={sidebarVisible}>
             <Segment basic style={{ padding: 0 }}>
-              <Grid columns={1}>
+              <Grid columns="equal">
                 <Grid.Row
                   className="AppHeader"
                   style={{ marginTop: 10, marginRight: 12, marginLeft: 12 }}
