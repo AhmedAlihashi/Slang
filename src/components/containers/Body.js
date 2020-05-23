@@ -1,31 +1,67 @@
 import React, { Component } from "react";
 import { Grid, Rating, Segment, Header, Icon } from "semantic-ui-react";
 import { RecommendedContent } from "../";
-import { VideoPlayer, ContentOptions, CommentSection } from "../modules";
+import {
+  VideoPlayer,
+  ContentOptions,
+  CommentSection,
+  InfoSection,
+  ShareSection,
+  SaveSection,
+  VidReplySection,
+  FlagSection,
+} from "../modules";
 import { BodyContext } from "../../Reactor/Context/BodyContext";
 
 class Body extends Component {
-  state = {};
+  state = {
+    rating: undefined,
+    maxRating: undefined,
+    controlSwitch: "Super Elastic Bubble Plastic",
+  };
 
   handleRate = (e, { rating, maxRating }) =>
-    this.setState({ rating, maxRating });
+    this.setState({ rating: rating, maxRating: maxRating });
 
   render() {
     const { demoVid } = this.props;
+    const { controlSwitch } = this.state;
 
+    const controlCallback = (controlSwitch) => {
+      this.setState({ controlSwitch: controlSwitch });
+    };
+
+    const controlOptions = (controlSwitch) => {
+      switch (controlSwitch) {
+        default:
+          return <InfoSection />;
+        case "info":
+          return <InfoSection />;
+        case "comments":
+          return <CommentSection />;
+        case "share":
+          return <ShareSection />;
+        case "save":
+          return <SaveSection />;
+        case "videoReply":
+          return <VidReplySection />;
+        case "flag":
+          return <FlagSection />;
+      }
+    };
     return (
       <Grid.Column width={14}>
+        <BodyContext.Consumer>
+          {(context) => {
+            console.log(context.infoSwitch);
+          }}
+        </BodyContext.Consumer>
         <Segment basic id="NoDrag">
           <Segment>
-            <BodyContext.Consumer>
-              {(context) => {
-                console.log(context.infoSwitch);
-              }}
-            </BodyContext.Consumer>
             <Grid columns="equal">
               <Grid.Column width={11}>
                 <Header as="h3" floated="right">
-                  <ContentOptions />
+                  <ContentOptions controlCallback={controlCallback} />
                 </Header>
                 <Segment piled textAlign="center" style={{ overflowY: "" }}>
                   <VideoPlayer src={demoVid} />
@@ -75,7 +111,7 @@ class Body extends Component {
               </Grid.Column>
               <Grid.Column width={5}>
                 <Segment style={{ maxHeight: "64vh", overflowY: "auto" }}>
-                  <CommentSection />
+                  {controlOptions(controlSwitch)}
                 </Segment>
               </Grid.Column>
               <Grid.Column width={16}>

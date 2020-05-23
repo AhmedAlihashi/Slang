@@ -2,7 +2,11 @@ import React from "react";
 
 import { Button } from "semantic-ui-react";
 
-const ContentOptions = () => {
+const ContentOptions = ({ controlCallback }) => {
+  const sentData = (props) => {
+    controlCallback(props);
+  };
+
   return (
     <Button.Group size="small" id="NoDrag">
       <Button
@@ -10,7 +14,7 @@ const ContentOptions = () => {
         basic
         color="grey"
         onClick={() => {
-          console.log("info");
+          sentData("info");
         }}
       />
       <Button
@@ -18,7 +22,7 @@ const ContentOptions = () => {
         basic
         color="grey"
         onClick={() => {
-          console.log("comments");
+          sentData("comments");
         }}
       />
 
@@ -27,7 +31,7 @@ const ContentOptions = () => {
         basic
         color="grey"
         onClick={() => {
-          console.log("share");
+          sentData("share");
         }}
       />
       <Button
@@ -35,7 +39,7 @@ const ContentOptions = () => {
         basic
         color="grey"
         onClick={() => {
-          console.log("save");
+          sentData("save");
         }}
       />
       <Button
@@ -43,7 +47,7 @@ const ContentOptions = () => {
         basic
         color="grey"
         onClick={() => {
-          console.log("video reply");
+          sentData("videoReply");
         }}
       />
       <Button
@@ -51,7 +55,7 @@ const ContentOptions = () => {
         basic
         color="grey"
         onClick={() => {
-          console.log("flag");
+          sentData("flag");
         }}
       />
     </Button.Group>

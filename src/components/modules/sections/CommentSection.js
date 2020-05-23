@@ -1,6 +1,6 @@
 import React from "react";
 import { Comment, Header } from "semantic-ui-react";
-import { Comments } from "../";
+import { Comments } from "../..";
 
 const CommentSection = () => {
   return (
