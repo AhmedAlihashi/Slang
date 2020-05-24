@@ -8,12 +8,27 @@ export default class AppProvider extends Component {
 
     this.state = {
       locale: "en",
+      SlangModal: false,
     };
   }
 
   render() {
+    const openModal = () => {
+      this.setState({ SlangModal: true });
+    };
+
+    const closeModal = () => {
+      this.setState({ SlangModal: false });
+    };
+
     return (
-      <AppContext.Provider value={this.state}>
+      <AppContext.Provider
+        value={{
+          state: this.state,
+          openModal: openModal,
+          closeModal: closeModal,
+        }}
+      >
         {this.props.children}
       </AppContext.Provider>
     );
