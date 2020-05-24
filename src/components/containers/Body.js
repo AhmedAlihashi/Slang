@@ -1,5 +1,14 @@
 import React, { Component } from "react";
-import { Grid, Rating, Segment, Header, Icon } from "semantic-ui-react";
+import {
+  Grid,
+  Rating,
+  Segment,
+  Header,
+  Icon,
+  Popup,
+  Button,
+  Label,
+} from "semantic-ui-react";
 import { RecommendedContent } from "../";
 import {
   VideoPlayer,
@@ -68,7 +77,7 @@ class Body extends Component {
 
                   <Grid>
                     <Grid.Row>
-                      <Grid.Column width={8}>
+                      <Grid.Column width={5}>
                         <Header floated="left" as="h3">
                           <Header.Content>
                             <Header.Subheader as="h5">
@@ -78,11 +87,11 @@ class Body extends Component {
                         </Header>
                       </Grid.Column>
 
-                      <Grid.Column width={8}>
+                      <Grid.Column width={11}>
                         <Header floated="right">
                           <Header.Content>
                             <Grid>
-                              <Grid.Column width={13}>
+                              <Grid.Column width={7}>
                                 <Rating
                                   onRate={this.handleRate}
                                   maxRating={5}
@@ -91,15 +100,109 @@ class Body extends Component {
                                   size="large"
                                 />
                               </Grid.Column>
-                              <Grid.Column width={3}>
-                                <Icon
-                                  link
-                                  name="paper plane outline"
-                                  color="grey"
-                                  onClick={() => {
-                                    console.log("rate it");
-                                  }}
-                                />
+                              <Grid.Column width={9}>
+                                <Popup
+                                  wide
+                                  position="bottom center"
+                                  on="click"
+                                  trigger={
+                                    <Button
+                                      size="mini"
+                                      labelPosition="left"
+                                      content="Promote?"
+                                      label={{
+                                        as: "a",
+                                        basic: true,
+                                        pointing: "right",
+                                        content: "2,048",
+                                      }}
+                                      onClick={() => {
+                                        console.log("rate it");
+                                      }}
+                                    />
+                                  }
+                                >
+                                  <Grid columns="equal">
+                                    <Grid.Column>
+                                      <Popup
+                                        trigger={
+                                          <Button
+                                            color="red"
+                                            icon={
+                                              <Icon
+                                                size="large"
+                                                name="thumbs down outline"
+                                                flipped="horizontally"
+                                                color="black"
+                                              />
+                                            }
+                                            label={{
+                                              basic: true,
+                                              color: "red",
+                                              pointing: "left",
+                                              content: "725",
+                                            }}
+                                          />
+                                        }
+                                        content="wouldnt recommend it"
+                                        position="bottom center"
+                                        size="tiny"
+                                        inverted
+                                      />
+                                      <Icon />
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                      <Popup
+                                        trigger={
+                                          <Button
+                                            labelPosition="left"
+                                            color="blue"
+                                            icon={
+                                              <Icon
+                                                size="large"
+                                                name="thumbs up outline"
+                                                color="black"
+                                              />
+                                            }
+                                            label={{
+                                              basic: true,
+                                              color: "blue",
+                                              pointing: "right",
+                                              content: "733",
+                                            }}
+                                          />
+                                        }
+                                        content="wouldnt recommend it"
+                                        position="bottom center"
+                                        size="tiny"
+                                        inverted
+                                      />
+
+                                      {/* <Popup
+                                        trigger={
+                                          <Button
+                                            onClick={() => {
+                                              console.log("good");
+                                            }}
+                                            color="blue"
+                                            icon={
+                                              <Icon
+                                                size="large"
+                                                name="thumbs up outline"
+                                                color="black"
+                                              />
+                                            }
+                                            fluid
+                                          />
+                                        }
+                                        content="would recommend it"
+                                        position="bottom center"
+                                        size="tiny"
+                                        inverted
+                                      /> */}
+                                    </Grid.Column>
+                                  </Grid>
+                                </Popup>
                               </Grid.Column>
                             </Grid>
                           </Header.Content>
