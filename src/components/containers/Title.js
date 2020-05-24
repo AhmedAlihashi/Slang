@@ -48,9 +48,9 @@ class Title extends Component {
             <Grid.Column>
               <Statistic size="mini">
                 <Statistic.Value>
-                  <Icon name="star" color="yellow" size="small" />5
+                  <span style={{ fontSize: 17, fontWeight: "bold" }}>Lv. </span>
+                  <Icon name="leaf" color="yellow" size="small" />
                 </Statistic.Value>
-                <Statistic.Label>Rating</Statistic.Label>
               </Statistic>
             </Grid.Column>
           </Grid>
