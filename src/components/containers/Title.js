@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Header, Grid, Rating, Button, Icon, Input } from "semantic-ui-react";
+import {
+  Header,
+  Grid,
+  Button,
+  Icon,
+  Input,
+  Statistic,
+} from "semantic-ui-react";
 
 class Title extends Component {
   state = {};
@@ -21,24 +28,35 @@ class Title extends Component {
           </Header>
         </Grid.Column>
 
-        <Grid.Column width={4}>
-          <Header
-            floated="left"
-            as="h3"
-            textAlign={"left"}
-            style={{ color: "white" }}
-          >
-            <Header.Content>
-              The Will & Carlton Dance
-              <Header.Subheader as="h4" style={{ color: "white" }}>
-                Will & Carlton
-              </Header.Subheader>
-              <Header.Subheader as="h5">Nov 13, 1995</Header.Subheader>
-            </Header.Content>
-          </Header>
+        <Grid.Column width={6}>
+          <Grid columns="equal">
+            <Grid.Column width={12}>
+              <Header
+                floated="left"
+                as="h3"
+                textAlign={"left"}
+                style={{ color: "white" }}
+              >
+                <Header.Content>
+                  The Will & Carlton Dance
+                  <Header.Subheader style={{ color: "black" }}>
+                    Will & Carlton
+                  </Header.Subheader>
+                </Header.Content>
+              </Header>
+            </Grid.Column>
+            <Grid.Column>
+              <Statistic size="mini">
+                <Statistic.Value>
+                  <span style={{ fontSize: 17, fontWeight: "bold" }}>Lv. </span>
+                  <Icon name="leaf" color="yellow" size="small" />
+                </Statistic.Value>
+              </Statistic>
+            </Grid.Column>
+          </Grid>
         </Grid.Column>
 
-        <Grid.Column width={4}>
+        <Grid.Column width={5}>
           <Input
             id="NoDrag"
             fluid
@@ -46,48 +64,6 @@ class Title extends Component {
             iconPosition="left"
             placeholder="Search..."
           />
-        </Grid.Column>
-
-        <Grid.Column width={3}>
-          <Header floated="right" style={{ color: "white" }}>
-            <div id="NoDrag">
-              <Rating
-                onRate={this.handleRate}
-                maxRating={5}
-                // defaultRating={rating}
-                icon="star"
-                size="large"
-              />
-            </div>
-            <div id="NoDrag">
-              <Button.Group size="small">
-                <Button
-                  icon="share alternate"
-                  basic
-                  color="black"
-                  onClick={() => {
-                    console.log("share");
-                  }}
-                />
-                <Button
-                  icon="save outline"
-                  basic
-                  color="black"
-                  onClick={() => {
-                    console.log("save");
-                  }}
-                />
-                <Button
-                  icon="flag outline"
-                  basic
-                  color="black"
-                  onClick={() => {
-                    console.log("flag");
-                  }}
-                />
-              </Button.Group>
-            </div>
-          </Header>
         </Grid.Column>
 
         <Grid.Column width={3}>
