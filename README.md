@@ -1,6 +1,6 @@
 # Slang
 A centralized CDN for content creators via Electron &amp; React. This project is currently still under development, 
-the screenshot below shows the app's current state
+the screenshot below shows the app's current state. The video featured is streaming via the Google Cloud Platform.
 
 
 # Screenshots
