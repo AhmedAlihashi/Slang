@@ -59,6 +59,7 @@
       "last 1 safari version"
     ]
   },
+  "description": "MIT",
   "devDependencies": {
     "electron": "^8.2.3",
     "electron-builder": "^22.5.1",
