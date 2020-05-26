@@ -213,7 +213,7 @@ class Body extends Component {
                 </Segment>
               </Grid.Column>
               <Grid.Column width={5}>
-                <Segment style={{ maxHeight: "64vh", overflowY: "auto" }}>
+                <Segment style={{ maxHeight: "63vh", overflowY: "auto" }}>
                   {controlOptions(controlSwitch)}
                 </Segment>
               </Grid.Column>

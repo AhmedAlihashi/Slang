@@ -24,7 +24,7 @@ class Title extends Component {
     const renderSwitch = (props) => {
       switch (props) {
         case 1:
-          return <Icon name="frown" color="red" size="small" />;
+          return <Icon name="remove" color="red" size="small" />;
         case 2:
           return <Icon name="meh" color="orange" size="small" />;
         case 3:
