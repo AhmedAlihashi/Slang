@@ -7,15 +7,34 @@ import {
   Input,
   Statistic,
 } from "semantic-ui-react";
+import { AppContext } from "../../Reactor/Context/AppContext";
 
 class Title extends Component {
   state = {};
+
+  componentDidMount() {}
 
   handleRate = (e, { rating, maxRating }) =>
     this.setState({ rating, maxRating });
 
   render() {
-    const { sidebarVisible, setSidebarVisible } = this.props;
+    const { sidebarVisible, setSidebarVisible, context } = this.props;
+    const { lvColor } = this.state;
+
+    const renderSwitch = (props) => {
+      switch (props) {
+        case 1:
+          return <Icon name="frown" color="red" size="small" />;
+        case 2:
+          return <Icon name="meh" color="orange" size="small" />;
+        case 3:
+          return <Icon name="hand pointer" color="blue" size="small" />;
+        case 4:
+          return <Icon name="hand peace" color="green" size="small" />;
+        default:
+          return <Icon name="leaf" color="yellow" size="small" />;
+      }
+    };
     return (
       <>
         <Grid.Column width={2}>
@@ -49,7 +68,7 @@ class Title extends Component {
               <Statistic size="mini">
                 <Statistic.Value>
                   <span style={{ fontSize: 17, fontWeight: "bold" }}>Lv. </span>
-                  <Icon name="leaf" color="yellow" size="small" />
+                  {renderSwitch(context.state.Levels)}
                 </Statistic.Value>
               </Statistic>
             </Grid.Column>

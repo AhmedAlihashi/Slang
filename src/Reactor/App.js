@@ -127,6 +127,7 @@ const App = () => {
                         }}
                       >
                         <Title
+                          context={context}
                           sidebarVisible={sidebarVisible}
                           setSidebarVisible={setSidebarVisible}
                         />

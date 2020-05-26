@@ -9,6 +9,7 @@ export default class AppProvider extends Component {
     this.state = {
       locale: "en",
       SlangModal: false,
+      Levels: 0,
     };
   }
 
