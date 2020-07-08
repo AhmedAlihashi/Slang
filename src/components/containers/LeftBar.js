@@ -47,11 +47,11 @@ class LeftBar extends Component {
                 }}
               />
               <Button
-                icon="expand arrows alternate"
-                color="black"
                 style={{ fontSize: "2.5vw" }}
+                icon="user circle"
+                color="black"
                 onClick={() => {
-                  console.log("Fullscreen video");
+                  console.log("user");
                 }}
               />
               <Button
@@ -73,15 +73,6 @@ class LeftBar extends Component {
             }}
           >
             <Button.Group vertical>
-              <Button
-                style={{ fontSize: "2.5vw" }}
-                icon="user circle"
-                color="black"
-                onClick={() => {
-                  console.log("user");
-                }}
-              />
-
               <Button
                 color="black"
                 onClick={() => {
