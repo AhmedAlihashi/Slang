@@ -10,7 +10,7 @@ let mainWindow;
 async function createWindow() {
   await app.whenReady();
   mainWindow = new BrowserWindow({
-    icon: __dirname + "/build/vidLogo.ico",
+    icon: __dirname + "/build/slang.ico",
     width: 900,
     minWidth: 780,
     minHeight: 698,

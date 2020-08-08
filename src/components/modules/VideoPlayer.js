@@ -7,8 +7,8 @@ const VideoPlayer = ({ src, playing }) => {
       url={src}
       playing={playing}
       controls
-      width="100%"
-      height="100%"
+      width="45vw"
+      height="40vh"
       config={{
         file: {
           attributes: {

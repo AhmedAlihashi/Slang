@@ -75,7 +75,7 @@ class Body extends Component {
                 <Segment piled textAlign="center" style={{ overflowY: "" }}>
                   <VideoPlayer src={demoVid} />
 
-                  <Grid>
+                  <Grid style={{ margin: 2 }}>
                     <Grid.Row>
                       <Grid.Column width={5}>
                         <Header floated="left" as="h3">

@@ -11,8 +11,7 @@ const App = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const [select, setSelect] = useState("A");
 
-  const demoVid =
-    "https://firebasestorage.googleapis.com/v0/b/slang-e0aea.appspot.com/o/Will%20%26%20Carlton.mp4?alt=media&token=14a07826-7f5b-4f21-b21f-6b35377cd3cc";
+  const demoVid = "https://youtu.be/dXOLJOnLKDg";
 
   const handleModel = (select) => {
     switch (select) {
