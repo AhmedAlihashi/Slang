@@ -5,5 +5,5 @@ the screenshot below shows the app's current state. The video featured is stream
 
 # Screenshots
 <p float="left">
-<img src="designs/preview.png" height="600" width="800" />  
+<img src="designs/preview1.png" height="600" width="800" />  
 </p>  
