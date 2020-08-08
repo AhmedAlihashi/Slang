@@ -1,7 +1,7 @@
 {
   "name": "slang",
   "homepage": "./",
-  "main": "src/start.js",
+  "main": "./start.js",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,24 +16,18 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
-    "framer-motion": "^1.10.3",
-    "gulp": "^3.9.1",
-    "plyr": "^3.6.2",
-    "prop-types": "^15.6.1",
     "react": "^16.13.1",
-    "react-countup": "^4.3.3",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.13.1",
     "react-player": "^2.0.1",
     "react-scripts": "3.4.1",
-    "react-sticky": "^6.0.3",
-    "recharts": "^1.8.5",
-    "semantic-ui-react": "^0.88.2",
-    "theme-ui": "^0.3.1"
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
     "start": "nf start -p 3000",
-    "electron:spark": "yarn build && electron-packager .",
+    "build-win": "npm run build && electron-packager . --platform win32 --icon ./public/vidLogo.ico --out ./dist --overwrite",
+    "build~win": "yarn build && electron-packager . --platform win32 --icon ./public/vidLogo.ico --out ./dist --overwrite",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
@@ -66,10 +60,21 @@
     "enzyme": "^3.3.0"
   },
   "build": {
-    "appId": "com.electron.electron-with-create-react-app",
-    "win": {
-      "iconUrl": "https://cdn2.iconfinder.com/data/icons/designer-skills/128/react-256.png"
+    "productName": "Slang",
+    "copyright": "Copyright © 2019 ",
+    "mac": {
+      "icon": "./public/vidLogo.ico"
     },
+    "win": {
+      "icon": "./public/vidLogo.ico"
+    },
+    "files": [
+      "./build/**/*",
+      "./dist/**/*",
+      "./node_modules/**/*",
+      "./public/**/*",
+      "*.js"
+    ],
     "directories": {
       "buildResources": "public"
     }

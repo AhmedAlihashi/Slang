@@ -3,6 +3,6 @@ import { render } from "react-dom";
 
 import { Core } from "./Reactor";
 import "./index.css";
-import Plyr from "plyr";
+import "semantic-ui-css/semantic.min.css";
 
 render(<Core />, document.getElementById("root"));
