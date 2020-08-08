@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Segment, Grid, Icon, Rating } from "semantic-ui-react";
+import { Button, Segment, Grid, Icon } from "semantic-ui-react";
 
 class LeftBar extends Component {
   state = {};

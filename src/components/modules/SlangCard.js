@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Icon, Image, Segment, Card } from "semantic-ui-react";
+import { Grid, Segment, Card } from "semantic-ui-react";
 import { Placeholder } from "./";
 
 const SlangCard = () => {

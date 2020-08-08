@@ -7,7 +7,6 @@ import {
   Input,
   Statistic,
 } from "semantic-ui-react";
-import { AppContext } from "../../Reactor/Context/AppContext";
 
 class Title extends Component {
   state = {};
@@ -18,8 +17,7 @@ class Title extends Component {
     this.setState({ rating, maxRating });
 
   render() {
-    const { sidebarVisible, setSidebarVisible, context } = this.props;
-    const { lvColor } = this.state;
+    const { context } = this.props;
 
     const renderSwitch = (props) => {
       switch (props) {

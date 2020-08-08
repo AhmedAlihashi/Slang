@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Grid, Segment, Sidebar, Modal, Menu, Button } from "semantic-ui-react";
 import "./../App.css";
 import { Title, LeftBar, Body } from "../components/containers";

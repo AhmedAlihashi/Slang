@@ -7,7 +7,6 @@ import {
   Icon,
   Popup,
   Button,
-  Label,
 } from "semantic-ui-react";
 import { RecommendedContent } from "../";
 import {
