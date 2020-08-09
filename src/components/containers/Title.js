@@ -55,9 +55,10 @@ class Title extends Component {
                 style={{ color: "white" }}
               >
                 <Header.Content>
-                  The Will & Carlton Dance
+                  Neutron Stars – The Most Extreme Things that are not Black
+                  Holes
                   <Header.Subheader style={{ color: "black" }}>
-                    Will & Carlton
+                    Kurzgesagt – In a Nutshell{" "}
                   </Header.Subheader>
                 </Header.Content>
               </Header>

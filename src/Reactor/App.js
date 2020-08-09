@@ -6,12 +6,12 @@ import { Scrollbars } from "react-custom-scrollbars";
 
 import { SlangModal } from "../components/modules";
 import { AppContext } from "./Context/AppContext";
-
+import demo from "./NeutronStars.mp4";
 const App = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const [select, setSelect] = useState("A");
 
-  const demoVid = "https://youtu.be/dXOLJOnLKDg";
+  const demoVid = demo;
 
   const handleModel = (select) => {
     switch (select) {

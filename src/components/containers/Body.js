@@ -71,6 +71,7 @@ class Body extends Component {
                 <Header as="h3" floated="right">
                   <ContentOptions controlCallback={controlCallback} />
                 </Header>
+
                 <Segment piled textAlign="center" style={{ overflowY: "" }}>
                   <VideoPlayer src={demoVid} />
 
