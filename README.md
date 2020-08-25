@@ -5,7 +5,7 @@ the screenshot below shows the app's current state. The video featured is stream
 
 ## Local setup
 
-The pre packaged version can be downloaded here (win-32 x64) [here](https://mega.nz/file/mugVVaIJ#ICTr_dMfyylqQYZQnqyT9RzT3vnmq99e0ShfPBdzHuY).  
+The pre packaged version can be downloaded here (win-32 x64) [here](https://drive.google.com/file/d/1cdKLCo8rocOPNxMi_ki67kp-hBwYmZYX/view?usp=sharing).  
 Or to setup locally
 
 ```
